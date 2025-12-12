@@ -1,0 +1,14 @@
+# PowerShell files
+*.ps1xml
+*.psd1
+*.psm1
+
+# Backup files
+backup_amd_settings.reg
+
+# Test data
+test-data.json
+report.txt
+
+# Rider files
+.idea/
