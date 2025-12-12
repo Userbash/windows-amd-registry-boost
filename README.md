@@ -1,53 +1,55 @@
-# Оптимизатор AMD GPU
+# AMD GPU Registry Optimizer
 
-Скрипт PowerShell для тонкой настройки и оптимизации параметров видеокарт AMD Radeon™ в реестре Windows.
+**English** | [Русский](README.ru.md)
 
-## Описание
+A PowerShell script for fine-tuning and optimizing AMD Radeon™ GPU settings in the Windows Registry.
 
-Этот скрипт предоставляет централизованный интерфейс для продвинутых пользователей, которые хотят получить максимальную производительность и стабильность от своих видеокарт AMD. Он позволяет изменять скрытые параметры драйвера, которые не доступны в стандартном интерфейсе Adrenalin Software.
+## Description
 
-**ВНИМАНИЕ:** Модификация реестра Windows может привести к нестабильности системы, сбоям или даже невозможности запуска операционной системы. Используйте этот скрипт на свой страх и риск. Автор не несет ответственности за любые возможные повреждения вашего оборудования или программного обеспечения.
+This script provides a centralized interface for advanced users who want to get the most performance and stability out of their AMD graphics cards. It allows you to change hidden driver settings that are not available in the standard Adrenalin Software interface.
 
-## Возможности
+**DISCLAIMER:** Modifying the Windows Registry can lead to system instability, crashes, or even prevent your operating system from booting. Use this script at your own risk. The author is not responsible for any possible damage to your hardware or software.
 
-- **Резервное копирование и восстановление:** Автоматически создает резервную копию изменяемых веток реестра перед применением настроек. Вы можете легко отменить все изменения.
-- **Точка восстановления системы:** Для дополнительной безопасности скрипт пытается создать точку восстановления Windows.
-- **Гибкие профили:** Выбор между различными профилями оптимизации в зависимости от вашей серии GPU (RDNA/RDNA2/RDNA3) и предпочтений (например, отключение оверлея для максимального FPS).
-- **Отключение телеметрии:** Отключает компоненты сбора данных AMD.
-- **Обширная база твиков:** Включает в себя большое количество параметров для оптимизации производительности, стабильности и качества изображения.
+## Features
 
-## Как использовать
+- **Backup and Restore:** Automatically creates a backup of the modified registry keys before applying settings. You can easily undo all changes.
+- **System Restore Point:** For added security, the script attempts to create a Windows Restore Point.
+- **Flexible Profiles:** Choose between different optimization profiles depending on your GPU series (RDNA/RDNA2/RDNA3) and preferences (e.g., disabling the overlay for maximum FPS).
+- **Disable Telemetry:** Disables AMD's data collection components.
+- **Extensive Tweak Database:** Includes a large number of parameters for optimizing performance, stability, and image quality.
 
-1.  **Скачайте** скрипт `main.ps1`.
-2.  **Запустите PowerShell от имени администратора.**
-    - Щелкните правой кнопкой мыши по меню "Пуск".
-    - Выберите "Windows PowerShell (Администратор)".
-3.  **Разрешите выполнение скриптов (если требуется):**
-    - В окне PowerShell введите команду:
+## How to Use
+
+1.  **Download** the `main.ps1` script.
+2.  **Run PowerShell as Administrator.**
+    - Right-click the Start Menu.
+    - Select "Windows PowerShell (Admin)".
+3.  **Allow script execution (if required):**
+    - In the PowerShell window, enter the command:
       ```powershell
       Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
       ```
-    - Нажмите `Y` и `Enter` для подтверждения.
-4.  **Перейдите в папку со скриптом:**
-    - Используйте команду `cd`, например:
+    - Press `Y` and `Enter` to confirm.
+4.  **Navigate to the script's folder:**
+    - Use the `cd` command, for example:
       ```powershell
-      cd C:\Users\ВашеИмя\Downloads
+      cd C:\Users\YourName\Downloads
       ```
-5.  **Запустите скрипт:**
-    - Введите команду:
+5.  **Run the script:**
+    - Enter the command:
       ```powershell
       .\main.ps1
       ```
-6.  **Следуйте инструкциям в меню:**
-    - Скрипт предложит создать резервную копию, а затем покажет меню для выбора профилей оптимизации.
-    - После применения настроек **обязательно перезагрузите компьютер**.
+6.  **Follow the on-screen instructions:**
+    - The script will offer to create a backup and then show a menu for selecting optimization profiles.
+    - After applying the settings, **be sure to restart your computer**.
 
-## Системные требования
+## System Requirements
 
-- **Операционная система:** Windows 10, Windows 11
-- **Видеокарта:** AMD Radeon™
-- **Права администратора** для запуска скрипта.
+- **Operating System:** Windows 10, Windows 11
+- **Graphics Card:** AMD Radeon™
+- **Administrator rights** to run the script.
 
-## Лицензия
+## License
 
-Этот проект лицензирован под лицензией GPLv3 - см. файл [LICENSE](LICENSE) для подробностей.
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
